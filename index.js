@@ -27,14 +27,22 @@ else if(avg > 79){
 
 
 
-if(speed<70){
-    print('Ok')
-}else{
+function getSpeed() {
+    let speed = prompt("Speed: ");
+    checkSpeed(speed);
+}
 
-print("Points:"+((speed-70)/5));
-
-if((speed-70)/5)>12)
-
-print('License suspended');
-
+function checkSpeed(speed) {
+    let points = speed;
+    points -= 70;
+    points /= 5;
+    if (speed <= 70) {
+      alert("Ok");
+    }
+    else if (points >= 12) {
+      alert("License suspended");
+    }
+    else {
+      alert(points + " Points");
+    }
 }
